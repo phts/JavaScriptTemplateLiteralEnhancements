@@ -1,0 +1,35 @@
+[
+	{
+		"keys": ["$"],
+		"command": "convert_selection_to_template_placeholder",
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "string.template.js"
+			},
+			{
+				"key": "selection_empty",
+				"operator": "equal",
+				"operand": false
+			}
+		]
+	},
+	{
+		"keys": ["$"],
+		"command": "insert_template_placeholder",
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "string.template.js"
+			},
+			{
+				"key": "selection_empty",
+				"operator": "equal",
+				"operand": true,
+				"match_all": true
+			}
+		]
+	}
+]
