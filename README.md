@@ -6,7 +6,7 @@ Plugin for Sublime Text 3.
 
 **Via Package Control**:
 
-1. `ctrl+shift+p` &rarr; `Package Control: Add Repository` &rarr; `https://github.com/phts/JSTemplateStringEnhancements.git`
+1. `ctrl+shift+p` &rarr; `Package Control: Add Repository` &rarr; `https://github.com/phts/JSTemplateStringEnhancements`
 2. `ctrl+shift+p` &rarr; `Package Control: Install Package` &rarr; `JSTemplateStringEnhancements`
 
 ## Usage
