@@ -1,13 +1,13 @@
 # JSTemplateStringEnhancements
 
-Plugin for Sublime Text 3.
+Package for Sublime Text 3.
 
 ## Install
 
 **Via Package Control**:
 
-1. `ctrl+shift+p` &rarr; `Package Control: Add Repository` &rarr; `https://github.com/phts/JSTemplateStringEnhancements`
-2. `ctrl+shift+p` &rarr; `Package Control: Install Package` &rarr; `JSTemplateStringEnhancements`
+1. Open Command Palette &rarr; `Package Control: Add Repository` &rarr; `https://github.com/phts/JSTemplateStringEnhancements`
+2. Open Command Palette &rarr; `Package Control: Install Package` &rarr; `JSTemplateStringEnhancements`
 
 ## Usage
 
