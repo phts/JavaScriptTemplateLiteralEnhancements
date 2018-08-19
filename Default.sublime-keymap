@@ -25,6 +25,11 @@
 				"operand": "string.template.js"
 			},
 			{
+				"key": "selector",
+				"operator": "not_equal",
+				"operand": "string.template.js.fjsx15"
+			},
+			{
 				"key": "selection_empty",
 				"operator": "equal",
 				"operand": true,
