@@ -34,3 +34,26 @@ If nothing is selected type `$` inside template literal to insert a placeholder:
 ```js
 const str = `This is ${}`
 ```
+
+### Convert into template/string literal
+
+There are a few commands for converting string or template literal under the cursor or selection into single/double quoted string or template literal.
+
+**Example:**
+
+Put a cursor into a string literal:
+
+```js
+                           ▼
+const str = 'This is my str|ing'
+                           ▲
+```
+
+Open Command Palette and run command `JSTemplateLiteralEnhancements: Convert into template literal`.
+This string will be converted into template literal:
+
+```js
+                           ▼
+const str = `This is my str|ing`
+                           ▲
+```

@@ -6,5 +6,17 @@
 	{
 		"caption": "JSTemplateLiteralEnhancements: Insert placeholder",
 		"command": "insert_template_placeholder"
-	}
+	},
+	{
+		"caption": "JSTemplateLiteralEnhancements: Convert into template literal",
+		"command": "convert_into_template_literal"
+	},
+	{
+		"caption": "JSTemplateLiteralEnhancements: Convert into single quoted string literal",
+		"command": "convert_into_single_quoted_string_literal"
+	},
+	{
+		"caption": "JSTemplateLiteralEnhancements: Convert into double quoted string literal",
+		"command": "convert_into_double_quoted_string_literal"
+	},
 ]
