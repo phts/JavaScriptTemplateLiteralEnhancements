@@ -1,6 +1,15 @@
 import sublime
 import sublime_plugin
 
+SUPPORTED_TEMPLATE_LITERAL_SCOPES = [
+    'string.template.js',
+    'string.template.js.fjsx15',
+]
+
+def is_supported_scope(scope_name):
+    scopes = scope_name.split(' ')
+    return any(sc in SUPPORTED_TEMPLATE_LITERAL_SCOPES for sc in scopes)
+
 class ConvertSelectionToTemplatePlaceholderCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         selection = self.view.sel()
@@ -10,8 +19,7 @@ class ConvertSelectionToTemplatePlaceholderCommand(sublime_plugin.TextCommand):
             if region.empty():
                 continue
 
-            scopes = self.view.scope_name(region.begin()).split(' ')
-            if 'string.template.js' not in scopes:
+            if not is_supported_scope(self.view.scope_name(region.begin())):
                 continue
 
             value = self.view.substr(region)
@@ -31,8 +39,7 @@ class InsertTemplatePlaceholderCommand(sublime_plugin.TextCommand):
         new_regions = []
 
         for region in selection:
-            scopes = self.view.scope_name(region.begin()).split(' ')
-            if 'string.template.js' not in scopes:
+            if not is_supported_scope(self.view.scope_name(region.begin())):
                 continue
 
             self.view.insert(edit, region.begin(), '${}')
