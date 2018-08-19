@@ -1,10 +1,10 @@
 [
 	{
-		"caption": "JSTemplateStringEnhancements: Convert to placeholder",
+		"caption": "JSTemplateLiteralEnhancements: Convert to placeholder",
 		"command": "convert_selection_to_template_placeholder"
 	},
 	{
-		"caption": "JSTemplateStringEnhancements: Insert placeholder",
+		"caption": "JSTemplateLiteralEnhancements: Insert placeholder",
 		"command": "insert_template_placeholder"
 	}
 ]
