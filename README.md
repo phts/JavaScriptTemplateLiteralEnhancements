@@ -1,6 +1,7 @@
 # JavaScriptTemplateLiteralEnhancements
 
 Package for Sublime Text 3.
+Improve experience with template literals in JavaScript.
 
 ## Install
 
