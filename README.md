@@ -1,5 +1,7 @@
 # JavaScriptTemplateLiteralEnhancements
 
+[![Package Control](https://img.shields.io/packagecontrol/dt/JavaScriptTemplateLiteralEnhancements.svg)](https://packagecontrol.io/packages/JavaScriptTemplateLiteralEnhancements)
+
 Package for Sublime Text 3.
 Improve experience with template literals in JavaScript.
 
@@ -7,8 +9,7 @@ Improve experience with template literals in JavaScript.
 
 **Via Package Control**:
 
-1. Open Command Palette &rarr; `Package Control: Add Repository` &rarr; `https://github.com/phts/JavaScriptTemplateLiteralEnhancements`
-2. Open Command Palette &rarr; `Package Control: Install Package` &rarr; `JavaScriptTemplateLiteralEnhancements`
+Open Command Palette &rarr; `Package Control: Install Package` &rarr; `JavaScriptTemplateLiteralEnhancements`
 
 ## Usage
 
