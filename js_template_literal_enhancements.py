@@ -32,7 +32,7 @@ def is_any_included_in_scope_name(scope_name, values):
     return any(sc in values for sc in scopes)
 
 def is_supported_template_scope(scope_name):
-    return if_scopes_include_one_of(scope_name, SUPPORTED_LITERALS['template']['scopes'])
+    return is_any_included_in_scope_name(scope_name, SUPPORTED_LITERALS['template']['scopes'])
 
 def wrap_insert(view, edit, region, str):
     view.insert(edit, region.end(), str)
