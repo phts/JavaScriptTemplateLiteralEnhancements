@@ -1,13 +1,5 @@
 [
 	{
-		"caption": "JavaScriptTemplateLiteralEnhancements: Convert to placeholder",
-		"command": "convert_selection_to_template_placeholder"
-	},
-	{
-		"caption": "JavaScriptTemplateLiteralEnhancements: Insert placeholder",
-		"command": "insert_template_placeholder"
-	},
-	{
 		"caption": "JavaScriptTemplateLiteralEnhancements: Convert into template literal",
 		"command": "convert_into_template_literal"
 	},
@@ -18,5 +10,5 @@
 	{
 		"caption": "JavaScriptTemplateLiteralEnhancements: Convert into double quoted string literal",
 		"command": "convert_into_double_quoted_string_literal"
-	},
+	}
 ]

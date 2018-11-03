@@ -31,9 +31,6 @@ def is_any_included_in_scope_name(scope_name, values):
     scopes = scope_name.split(' ')
     return any(sc in values for sc in scopes)
 
-def is_supported_template_scope(scope_name):
-    return is_any_included_in_scope_name(scope_name, SUPPORTED_LITERALS['template']['scopes'])
-
 def wrap_insert(view, edit, region, str):
     view.insert(edit, region.end(), str)
     view.insert(edit, region.begin(), str)
@@ -77,46 +74,6 @@ def convert_into_literal(literal, view, edit):
             wrap_replace_inside(view, edit, sel_region, symbol)
         else:
             wrap_insert(view, edit, sel_region, symbol)
-
-class ConvertSelectionToTemplatePlaceholderCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        selection = self.view.sel()
-        new_regions = []
-
-        for region in selection:
-            if region.empty():
-                continue
-
-            if not is_supported_template_scope(self.view.scope_name(region.begin())):
-                continue
-
-            value = self.view.substr(region)
-            region_lenght = region.end() - region.begin()
-            self.view.replace(edit, region, '${'+value+'}')
-            new_region_start = region.begin() + 2
-            new_region_end = new_region_start + region_lenght
-            new_region = sublime.Region(new_region_start, new_region_end)
-            new_regions.append(new_region)
-
-        selection.clear()
-        selection.add_all(new_regions)
-
-class InsertTemplatePlaceholderCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        selection = self.view.sel()
-        new_regions = []
-
-        for region in selection:
-            if not is_supported_template_scope(self.view.scope_name(region.begin())):
-                continue
-
-            self.view.insert(edit, region.begin(), '${}')
-            new_region_start = region.begin() + 2
-            new_region = sublime.Region(new_region_start, new_region_start)
-            new_regions.append(new_region)
-
-        selection.clear()
-        selection.add_all(new_regions)
 
 class ConvertIntoTemplateLiteralCommand(sublime_plugin.TextCommand):
     def run(self, edit):
